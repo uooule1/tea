@@ -1,0 +1,284 @@
+* {
+	margin:0;   /* 마진 리셋 */
+	padding:0;   /* 패딩 리셋 */
+	box-sizing: border-box;   /* 박스 영역은 테두리까지 */ 
+}
+a , a:visited{
+	text-decoration:none;  /* 텍스트 링크 밑줄 없애기 */ 
+	color:black;
+}
+ul {
+	list-style: none;
+}
+p,h2,h3{
+	margin:20px;
+}
+/********************************/
+/*  버튼, 색상등의  요소   */
+/********************************/
+.small_button{
+  	border:none;
+	position: relative;
+	width: 60px;
+	height:35px;
+	font-size: 0.9em;
+	padding: 0;
+	margin: 10px 10px 0px 0px;
+	font-weight: 500px;
+	text-align: center;
+	border-radius: 5px;
+	cursor:pointer;
+}
+.medium_button{
+  	border:none;
+	position: relative;
+	width: 100px;
+	height:35px;
+	font-size: 0.9em;
+	padding: 0;
+	margin: 10px 10px 0px 0px;
+	font-weight: 500px;
+	text-align: center;
+	border-radius: 5px;
+	cursor:pointer;
+}
+.large_button{
+  	border:none;
+	position: relative;
+	width: 150px;
+	height:35px;
+	font-size: 0.9em;
+	padding: 0;
+	margin: 10px 10px 0px 0px;
+	font-weight: 500px;
+	text-align: center;
+	border-radius: 5px;
+	cursor:pointer;
+}
+.blue{
+	background:#002db3;
+	color: #FFF;
+  	border:solid 1px rgba(224,224,224,.5);
+}
+.gray{
+	background:rgba(224,224,224,.5);
+	color: #000;
+  	border:solid 1px rgba(224,224,224,.5);
+}
+.yellow{
+	background:rgb(255, 204, 0);
+	color: #000;
+  	border:solid 1px rgba(224,224,224,.5);
+}
+.red{
+	background:#cc0000;
+	color: #FFF;
+  	border:solid 1px rgba(224,224,224,.5);
+}
+.box{
+	height: 35px;
+	border: 1px solid rgba(224,224,224,1);
+	border-radius: 7px;
+	padding-left: 10px;
+}
+.maxlarge{
+	width:400px;
+}
+.large{
+	width: 260px;
+}
+.medium{
+	width: 170px;
+}
+.small{
+	width: 80px;
+}
+td{
+	padding:8px;
+}
+.text_contents{
+  border: 1px solid rgba(224,224,224,1);
+  resize:none;
+  border-radius: 7px;
+  height: 400px;
+}
+
+input:focus::-webkit-input-placeholder {
+  color:#002db3;
+}
+
+
+/*정렬방법*/
+.left{
+	width:50%;
+	float:left;
+}
+.right{
+	float:right;
+	width:50%;
+}
+
+.flexbox{
+	display:inline-flex;
+	width:100%;
+	justify-content:space-around;
+	flex-wrap:wrap;
+}
+
+/*화면 전체*/
+.wrap{
+	width : 1300px;
+	margin: 0px auto;
+}
+
+/********************************/
+/*  main    */
+/********************************/
+/*컨텐츠 전체*/
+main{
+	margin:0px auto;
+	width:1300px;
+	min-height:600px;/* 최소 높이*/
+}
+/********************************/
+/*   header 영역    */
+/********************************/
+.top_area{
+	width:100%;    /*  너비 */
+	height:80px;
+	background:black;
+	display:flex;
+}
+.top_area a{
+	color:white;
+	font-weight:bold;
+}
+/*헤더 나누기 왼쪽 , 오른 쪽*/
+.left_area{
+	width:70%;
+	display:inline-flex;
+	align-items:center;
+}
+.right_area{
+	width:30%;
+	display:inline-flex;
+	align-items:center;
+}
+/* 왼쪽 상단 로고와 메뉴바로 나누기 */
+.logo_area{
+	width:30%;
+	display:flex;
+	justify-content:space-around;
+}
+.nav_area{
+	width:70%;
+}
+/* 오른쪽 상단 메뉴바와 로그인으로 나누기 */
+.util_area,.login_area{
+	width:50%;
+}
+/*메뉴 ul, li 요소 초기화 */
+
+.main_menu{
+	position : relative;/*서브메뉴 위치 조정을 위해서*/
+	display : inline-flex;
+	justify-content:space-around;
+	width:50%;
+}
+.main_menu >li>a{
+	text-align:center;
+}
+.sub_menu{
+	position:absolute;
+	display:none;
+	width:160px;
+	z-index : 1; /*다른 요소들보다 앞에 배치*/
+	padding-left:10%;/*위치 조정*/
+}
+.sub_menu a{
+	display : block;
+	color:black;
+	font-weight:normal;
+}
+.main_menu >li:hover .sub_menu{
+	display: block;
+	background:white;
+}
+.sub_menu a:hover{
+	color:#002db3;
+}
+
+/********************************/
+/*   이미지 슬라이드 쇼 영역    */
+/********************************/
+#slideShow {   
+  clear:both;   /* 플로팅 해제 */
+  width:100%;    /* 너비 */ 
+  height:500px; 
+  overflow:hidden;   /* 영역 넘치면 감춤 */ 
+  position: relative;
+}
+#slides {
+  position: absolute;
+}
+#slides > img {
+  width:100%;  /* 너비 */
+  float:left;  /* 가로로 배치 */
+}
+
+button{
+  position: absolute;
+  height:100%;  /* 위아래 가득 차게 */ 
+  top:0;
+  border:none;  /* 테두리 없이 */  
+  padding:20px;
+  background-color: transparent;  /* 투명 배경 */ 
+  color:#000;  /* 화살표 색은 검정 */  
+  font-weight:800;  /* 굵게 */ 
+  font-size: 24px;  /* 화살표 크기 */ 
+  opacity: 0.5;  /* 반투명 */ 
+}
+#prev {
+  left:0;  /* 왼쪽으로 붙여서 */ 
+}
+#next {
+  right:0;  /* 오른쪽으로 붙여서 */ 
+}
+button:hover {
+  color:#fff;   /* 흰색 화살표 */ 
+  opacity:0.6;   /* 불투명도를 조금 높임 */ 
+  cursor:pointer;  /* 커서 모양을 포인터로 */ 
+}
+button:focus {
+  outline:0;  /* 아웃트라인 없앰 */
+}
+
+/********************************/
+/*  footer    */
+/********************************/
+.bottom_area {
+	width:100%;   
+	height:50px;
+	color:gray;
+}
+.bottom_area > p {
+  font-size:14px;  /* 글자 크기 */
+  color:gray;    /* 글자 색*/ 
+  display:inline-block;
+  margin:0px 5px;
+}
+.bottom_menu{
+	position : relative;
+	display : inline-block;
+	width:50%;
+	height:20px;
+}
+.bottom_menu > li {
+  float:left;
+  color:gray;
+  margin:10px;
+}
+.bottom_menu li a, .bottom_menu ul li a:visited {  
+  font-size:14px;  /* 글자 크기 */ 
+  color:#666;   /* 글자 색 */ 
+}

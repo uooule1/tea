@@ -1,0 +1,25 @@
+@charset "UTF-8";
+main{
+	margin:10px;
+	justify-content:center;
+}
+table {
+  border: 1px rgba(224,224,224,.5) solid;
+  font-size: 0.9em;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+}
+table a:hover {
+  text-decoration: underline;
+  color:#002db3;
+}
+th {
+	text-align: left;
+	background:rgba(224,224,224,.5);
+}
+ td, th {
+  padding: 1em .5em;
+  vertical-align: middle;
+}
